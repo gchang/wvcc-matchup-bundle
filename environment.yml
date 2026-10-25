@@ -1,0 +1,13 @@
+# Conda environment for the WVCC CrIS/VIIRS matchup bundle: the conda-forge set the 2026-10-25 check ran with.
+# Create it with: conda env create -f environment.yml
+name: wvcc-matchup-bundle
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12   # the version checked; matchup_pge's README asks for 3.8 or newer
+  - numpy         # not pinned: numpy 2 works with the fixed CrIS_VIIRS_collocation-master (the upstream code needs numpy 1.23 or older)
+  - netcdf4       # reads CrIS L1B and VJ103MOD, writes the product
+  - pykdtree      # KD-tree for the footprint search
+  - pyhdf         # listed in matchup_pge's requirements.txt; only its AIRS/MODIS runner imports it, not the CrIS/VIIRS run
+  # Left out on purpose: h5py, which matchup_pge's requirements.txt lists for the old VIIRS HDF5 format;
+  # nothing on the parallel_run_matchup.py path imports it.

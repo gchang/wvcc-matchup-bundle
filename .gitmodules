@@ -1,0 +1,6 @@
+[submodule "matchup_pge"]
+	path = matchup_pge
+	url = https://github.com/JPL-WVCC/matchup_pge.git
+[submodule "CrIS_VIIRS_collocation-master"]
+	path = CrIS_VIIRS_collocation-master
+	url = https://github.com/gchang/wvcc-cris-viirs-collocation.git
