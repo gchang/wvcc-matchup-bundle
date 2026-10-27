@@ -9,7 +9,7 @@ git clone --recurse-submodules https://github.com/gchang/wvcc-matchup-bundle.git
 | Submodule | Repository | Commit | Role |
 |---|---|---|---|
 | `matchup_pge` | https://github.com/JPL-WVCC/matchup_pge (unchanged) | 77def16ce19e82a52bd4fce2b39348c01d315f07 | the production runner, `matchup/parallel_run_matchup.py` |
-| `CrIS_VIIRS_collocation-master` | https://github.com/gchang/wvcc-cris-viirs-collocation, a copy of https://github.com/JPL-WVCC/CrIS_VIIRS_collocation-master at 77f84fe4e79a7308e3995dc5a69d0e53d60898ac | 54fa8a3585f84372bf785f7e0aa4faf832576818 | the collocation library (`code_test_QY.py`, `geo_QY.py`) |
+| `CrIS_VIIRS_collocation-master` | https://github.com/gchang/wvcc-cris-viirs-collocation, a copy of https://github.com/JPL-WVCC/CrIS_VIIRS_collocation-master at 77f84fe4e79a7308e3995dc5a69d0e53d60898ac | a9cff3fb0c85093ff218788372a836bc4febf307 | the collocation library (`code_test_QY.py`, `geo_QY.py`) |
 
 The collocation library is a copy with two small fixes in `geo_QY.py` so it runs on numpy 1.24 and newer, including numpy 2; the upstream commit needs numpy 1.23 or older. The fixes do not change the product. Its `MAAP_CHANGES.md` lists them. `matchup_pge` is used as is.
 
